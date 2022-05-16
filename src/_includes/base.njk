@@ -4,15 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
+	{% include '_google-fonts.njk' %}
 	<link rel="stylesheet" href="{{ '/assets/styles/style.css' | url }}" />
 	<script src="{{ '/assets/scripts/main.js' | url }}" defer></script>
 </head>
 <body>
-	<header>
-		<h1>{{ title }}</h1>
-	</header>
-	<main>
+    {% include '_navbar.njk' %}
+
 	{{ content | safe }}
-	</main>
 </body>
 </html>

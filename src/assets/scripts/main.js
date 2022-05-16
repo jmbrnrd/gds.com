@@ -1,4 +1,4 @@
-import another from './another';
+import navbar from "./navbar";
 
-another();
+navbar();
 

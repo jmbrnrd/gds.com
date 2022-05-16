@@ -1,0 +1,27 @@
+<header class="global-header flex">
+    <div class="logo flex">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 200 200"
+             class="nav-logo">
+            <path fill="#000"
+                  fill-rule="evenodd"
+                  d="M0 100c0 55.228 44.772 100 100 100s100-44.772 100-100S155.228 0 100 0 0 44.772 0 100Zm20 0c0 44.183 35.817 80 80 80s80-35.817 80-80-35.817-80-80-80-80 35.817-80 80Zm97-45c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15Zm-60 3H39v77h18V58Zm26 18H65v77h18V76Zm26 16H91v77h18V92Zm0 0"/>
+        </svg>
+        <h1>{{ title }}</h1>
+    </div>
+    <nav>
+        <ul id="navigation"
+            class="global-nav flex">
+            <li>
+                <a {% if page.url == '/' %} aria-current="page" {% endif %} href="/">LESSONS</a>
+            </li>
+            <li>
+                <a {% if page.url == '/testimonials/' %} aria-current="page" {% endif %} href="/testimonials/">STUDENTS</a>
+            </li>
+            <li>
+                <a {% if page.url == '/resources/' %} aria-current="page" {% endif %} href="/resources/">RESOURCES</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
