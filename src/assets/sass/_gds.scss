@@ -1,17 +1,17 @@
 @use "mixin" as *;
 
-$brand-color: hsl(43, 90%, 65%); //#f5c443;
-$brand-color-dark: hsl(42, 77%, 53%); //#f5c443;
-$brand-highlight-color: hsl(16, 80%, 50%); //#f5c443;
+$brand-color: hsl(43 90% 65% / 1); //#f5c443;
+$brand-color-dark: hsl(42 77% 53% / 1); //#f5c443;
+$brand-highlight-color: hsl(16 80% 50% / 1); //#f5c443;
 $bgd-color: hsl(53 4% 93% / 1); //#edece4;
-$grey-lightest: hsl(150 1% 96%);
+$grey-lightest: hsl(150 1% 96% / 1);
 $grey-dark: hsla(0 1% 27% / 1);
 $grey-darkest: hsla(0 1% 20% / 1);
-$grey-black: hsl(240 26% 12%);
+$grey-black: hsl(240 26% 12% / 1);
 
 $bgd-1: #F4F6F5;
 
-$bgd-3: hsl(150, 3%, 95%); //#E5EDE8;
+$bgd-3: hsl(150 3% 95% / 1); //#E5EDE8;
 
 
 $nav-gap: 2rem;
