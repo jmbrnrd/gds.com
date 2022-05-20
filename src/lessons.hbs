@@ -1,0 +1,49 @@
+---
+title: "Book Your Lessons 07852 271433"
+layout: "base.hbs"
+---
+
+<section class="hero">
+    <div class="content-inner">
+        <div class="brand">
+            <span>{{ title }}</span>
+        </div>
+        <p>All Genesis Driving School students will be provided with FREE, unlimited access to Theory Test
+            Pro and all the official questions from the DSA - including all new changes.</p>
+    </div>
+</section>
+<main class="padding-top-5">
+    <section>
+        <div class="content-inner flex">
+            <div class="section-panel-half">
+                <div class="content">
+                    <h2>Driving Lessons</h2>
+                    <p>School, college or work pick-ups no problem.</p>
+                    <div class="grid">
+                        {{#each lessons.hours }}
+                            <h3>{{ name }}</h3>
+                            <h3 class="txt-right">{{ price }}</h3>
+                            <div class="col-span-2">{{ desc }}</div>
+                        {{/each}}
+                    </div>
+                    <a class="btn" href="tel:+447852271433">CALL 07852 271433</a>
+                </div>
+            </div>
+            <div class="section-panel-half">
+                <div class="content full-width">
+                    <h2>Driving Courses</h2>
+                    <p>School, college or work pick-ups no problem.</p>
+                    <div class="grid">
+                        {{#each lessons.courses }}
+                            <h3>{{ name }}</h3>
+                            <h3 class="txt-right">{{ price }}</h3>
+                            <div class="col-span-2">{{ desc }}</div>
+                        {{/each}}
+                    </div>
+                    <a class="btn" href="tel:+447852271433">CALL 07852 271433</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </main>

@@ -13,14 +13,17 @@
         <ul id="navigation"
             class="global-nav flex">
             <li>
-                <a {% if page.url == '/' %} aria-current="page" {% endif %} href="/">LESSONS</a>
+                <a {{#if (isEqual page.url "/") }} aria-current="page" {{/if}} href="/">HOME</a>
             </li>
             <li>
-                <a {% if page.url == '/testimonials/' %} aria-current="page" {% endif %} href="/testimonials/">STUDENTS</a>
+                <a {{#if (isEqual page.url "/lessons/") }} aria-current="page" {{/if}} href="/lessons">LESSONS & PRICES</a>
             </li>
             <li>
-                <a {% if page.url == '/resources/' %} aria-current="page" {% endif %} href="/resources/">RESOURCES</a>
+                <a {{#if (isEqual page.url '/testimonials/') }} aria-current="page" {{/if}} href="/testimonials/">TESTIMONIALS</a>
             </li>
+<!--            <li>-->
+<!--                <a {{#if (isEqual page.url '/resources/') }} aria-current="page" {{/if}} href="/resources/">RESOURCES</a>-->
+<!--            </li>-->
         </ul>
     </nav>
 </header>

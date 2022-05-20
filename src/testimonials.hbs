@@ -1,0 +1,30 @@
+---
+title: "Genesis Driving School Testimonials"
+layout: "base.hbs"
+---
+<main>
+    <section class="hero">
+        <div class="content-inner">
+            <div class="brand">
+                <span>{{ title }}</span>
+            </div>
+            <p>This is what some of our students had to say, after passing their driving test with Genesis Driving School.</p>
+        </div>
+    </section>
+    <section>
+        <h2 class="hidden">Genesis Driving School Student testimonials</h2>
+        <div class="gallery">
+
+            {{#each students }}
+            <div class="student-card">
+                <img src="/assets/images/students/{{ this.date }}-{{ lowercase this.name }}.jpg"
+                     loading="lazy" alt="{{ this.name }} {{ this.date }}">
+                <div class="panel">"{{ this.quote }}"
+                    <div class="name">~ {{ this.name }} {{ this.date }}</div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </section>
+</main>

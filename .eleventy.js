@@ -1,5 +1,8 @@
 module.exports = function (config) {
 
+  config.addHandlebarsHelper("isEqual", function(value1, value2) {
+    return value1 === value2;
+  });
   config.addWatchTarget("./src/assets/sass/");
   config.addWatchTarget('./src/assets/scripts/');
   config.addPassthroughCopy('./src/assets/images/');
