@@ -1,20 +1,24 @@
 export default function() {
 
+    const navMenu = document.getElementById('navMenu');
     const navBtn = document.getElementById('navBtn');
+    const mobile = document.querySelector('[data-mobile]');
     let navIsClosed = true;
 
     // Hero navigation
-    navBtn.addEventListener('click', () => {
+    navMenu.addEventListener('click', () => {
         console.log(navIsClosed);
         if (navIsClosed) {
             // activate
             navBtn.classList.add('is-active');
-            navBar.classList.add('nav-active');
+            navMenu.classList.add('nav-active');
+            mobile.classList.add('active');
             navIsClosed = false;
         } else {
             // deactivate
             navBtn.classList.remove('is-active');
-            //navBar.classList.remove('nav-active');
+            navMenu.classList.remove('nav-active');
+            mobile.classList.remove('active');
             navIsClosed = true;
         }
     });

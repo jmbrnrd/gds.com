@@ -9,6 +9,7 @@
         </svg>
         <h1>{{ title }}</h1>
     </div>
+
     <!-- mobile nav -->
     <div class="nav-menu" id="navMenu">
         <button id="navBtn" class="hamburger hamburger--spin" type="button" title="Genesis Driving School mobile navigation menu">
@@ -17,6 +18,21 @@
         </span>
         </button>
     </div>
+
+    <ul class="nav-list-mobile" role="list" data-mobile="true">
+        <li>
+            <a {{#if (isEqual page.url "/") }} aria-current="page" {{/if}} href="/">HOME</a>
+        </li>
+        <li>
+            <a {{#if (isEqual page.url "/lessons/") }} aria-current="page" {{/if}} href="/lessons">LESSONS</a>
+        </li>
+        <li>
+            <a {{#if (isEqual page.url '/testimonials/') }} aria-current="page" {{/if}} href="/testimonials/">TESTIMONIALS</a>
+        </li>
+<!--            <li>-->
+<!--                <a {{#if (isEqual page.url '/resources/') }} aria-current="page" {{/if}} href="/resources/">RESOURCES</a>-->
+<!--            </li>-->
+    </ul>
     <nav>
         <ul id="navigation"
             class="global-nav flex">

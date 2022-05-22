@@ -66,6 +66,24 @@ img {
 	}
 }
 
+.nav-list-mobile {
+	display: none;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	inset: 0 0 0 0;
+	background-color: white;
+	z-index: 100;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+	font-size: 3rem;
+	&.active {
+		display: flex;
+		opacity: .9;
+	}
+}
 
 // Primary nav
 .global-header {
@@ -122,11 +140,7 @@ img {
 		display: flex;
 	}
 }
-.nav-menu {
-	position: absolute;
-	top: 0;
-	background-color: white;
-}
+
 
 main {
 	background-color: white;
