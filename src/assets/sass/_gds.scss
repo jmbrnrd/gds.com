@@ -10,9 +10,7 @@ $grey-darkest: hsla(0 1% 20% / 1);
 $grey-black: hsl(240 26% 12% / 1);
 
 $bgd-1: #F4F6F5;
-
 $bgd-3: hsl(150 3% 95% / 1); //#E5EDE8;
-
 
 $nav-gap: 2rem;
 $font-display: 'Antonio', sans-serif;
@@ -20,6 +18,8 @@ $font-size: 1rem;
 $font-default: 'Barlow', sans-serif;
 $header-height: 5rem;
 $radius: .3125rem;
+
+$tablet: '600px';
 
 // defaults
 footer {
@@ -117,12 +117,13 @@ img {
 	}
 	.active, [aria-current] { color: red; }
 }
+
 main {
 	background-color: white;
 	min-height: 100vh;
 }
 .hero {
-	padding: 3rem;
+	//padding: 3rem;
 	background: url("../images/gds-bgdimage.jpg") no-repeat top;
 	background-size: cover;
 	display: flex;
@@ -137,15 +138,14 @@ main {
 		align-items: center;
 		span {
 			font-family: $font-display;
-			font-size: 3.25rem;
+			font-size: clamp(2rem, 3.25rem, 5rem);
 			color: black;
 			letter-spacing: -.1rem;
 			line-height: 1.1;
-			//padding: 0 0 .15em .125em; // adjust vertical pos. vs logo
+			padding: 0 0 .15em .125em; // adjust vertical pos. vs logo
 		}
 	}
 	svg { height: 4rem;}
-
 	p {
 		margin:1rem 3rem 0;
 		font-size: 1.5rem;
@@ -160,14 +160,21 @@ main {
 			width: auto;
 		}
 	}
+	//@include mq($tablet) {
+	//	margin:1rem 3rem 0;
+	//}
 }
 section {
 	display: flex;
 	justify-content: center;
 	.content-inner {
 		max-width: 75rem;
-		padding: 2rem 2rem 0;
+		padding: 3rem 0;
 		margin: 0 auto;
+		//@include mq('600px') {
+		//	//padding: 2rem 2rem 0;
+		//	background-color: red;
+		//}
 	}
 	h2 {
 		font-family: $font-display;
@@ -180,7 +187,6 @@ section {
 		background-color: $grey-lightest;
 	}
 };
-
 .cards {
 	width: 100%;
 	display: flex;
