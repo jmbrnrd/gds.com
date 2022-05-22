@@ -1,6 +1,24 @@
 export default function() {
 
-    const main = document.querySelector('main')
+    const navBtn = document.getElementById('navBtn');
+    let navIsClosed = true;
+
+    // Hero navigation
+    navBtn.addEventListener('click', () => {
+        console.log(navIsClosed);
+        if (navIsClosed) {
+            // activate
+            navBtn.classList.add('is-active');
+            navBar.classList.add('nav-active');
+            navIsClosed = false;
+        } else {
+            // deactivate
+            navBtn.classList.remove('is-active');
+            //navBar.classList.remove('nav-active');
+            navIsClosed = true;
+        }
+    });
+
     const header = document.querySelector('header');
     const hero = document.querySelector('.hero');
 

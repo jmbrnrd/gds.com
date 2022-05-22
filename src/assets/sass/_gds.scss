@@ -19,6 +19,7 @@ $font-default: 'Barlow', sans-serif;
 $header-height: 5rem;
 $radius: .3125rem;
 
+$max-content-width: 65em;
 $tablet: '600px';
 
 // defaults
@@ -81,7 +82,7 @@ img {
 		margin: 1rem;
 		align-items: center;
 		transition: all .3s ease-out;
-		svg { height: 2rem; }
+		svg { height: min(2.75rem, 4rem); }
 		h1 {
 			margin-left: -1rem;
 			font-family: $font-display;
@@ -101,6 +102,7 @@ img {
 
 }
 .global-nav {
+	display: none;
 	justify-content: end;
 	font-size: 1rem;
 	margin: 1rem;
@@ -116,6 +118,14 @@ img {
 		}
 	}
 	.active, [aria-current] { color: red; }
+	@include mq($tablet) {
+		display: flex;
+	}
+}
+.nav-menu {
+	position: absolute;
+	top: 0;
+	background-color: white;
 }
 
 main {
@@ -123,7 +133,7 @@ main {
 	min-height: 100vh;
 }
 .hero {
-	//padding: 3rem;
+	padding: 5rem 2rem 1rem;
 	background: url("../images/gds-bgdimage.jpg") no-repeat top;
 	background-size: cover;
 	display: flex;
@@ -131,33 +141,36 @@ main {
 	justify-content: center;
 	align-items: center;
 	color: $grey-darkest;
-	//transition: all .3s ease-out;
 	.brand {
-		padding: 0 3rem;
 		display: flex;
 		align-items: center;
 		span {
 			font-family: $font-display;
-			font-size: clamp(2rem, 3.25rem, 5rem);
+			font-size: 3rem; /* Fallback value */
+			font-size: clamp(2.5rem, 4vw, 6rem);
 			color: black;
 			letter-spacing: -.1rem;
 			line-height: 1.1;
-			padding: 0 0 .15em .125em; // adjust vertical pos. vs logo
 		}
 	}
 	svg { height: 4rem;}
 	p {
-		margin:1rem 3rem 0;
-		font-size: 1.5rem;
+		margin:1rem 0;
+		font-size: 1.4rem;
 		line-height: 1.4;
 	}
 	.associations {
-		margin: 1rem 3rem 0;
-		align-items: center;
-		justify-content: flex-end;
+		width: 100%;
+		margin: 1rem auto;
+		justify-content: center;
+		gap: 1rem;
+		text-align: right;
 		img {
-			height: 3.25rem;
+			max-height: 3rem;
 			width: auto;
+		}
+		@include mq($tablet) {
+			justify-content: flex-end;
 		}
 	}
 	//@include mq($tablet) {
@@ -166,15 +179,16 @@ main {
 }
 section {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	flex-direction: column;
 	.content-inner {
-		max-width: 75rem;
-		padding: 3rem 0;
+		max-width: $max-content-width;
+		padding: 0 0;
 		margin: 0 auto;
-		//@include mq('600px') {
-		//	//padding: 2rem 2rem 0;
-		//	background-color: red;
-		//}
+
+		@include mq('600px') {
+
+		}
 	}
 	h2 {
 		font-family: $font-display;
@@ -214,17 +228,23 @@ section {
 	border-radius: $radius;
 	@include boxShadow();
 }
-.section-panel-full, .section-panel-half {
-	width: 100%;
+.section-panel-full,
+.section-panel-half {
 	display: flex;
+	flex-direction: column;
 	background-color: $grey-lightest;
 	overflow: hidden;
+	margin: 1.5rem 1.5rem 0;
 	border-radius: $radius;
 	@include boxShadow();
+	@include mq($tablet) {
+		flex-direction: row;
+		margin: 1.5rem 0 0;
+	}
 	.content {
-		width: 62%;
-		padding: 2.5rem 1rem 3rem 3rem;
+		padding: 2rem;
 		color: $grey-dark;
+
 		h2 {
 			text-transform: none;
 			line-height: 1.1;
@@ -236,15 +256,30 @@ section {
 	.img {
 		text-align: center;
 		align-self: center;
-		width: 38%;
+		width: 100%;
 		object-fit: cover;
+		@include mq($tablet) {
+			text-align: center;
+			align-self: center;
+			width: 38%;
+		}
 	};
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.btn {
+
+		//margin-inline: auto;
+		@include mq($tablet) {
+			max-width: 50%;
+		}
+	}
 }
 .section-panel-half {
 	flex-direction: column;
 	.content {
-		width: 100%;
-		padding: 2.5rem 3rem 3rem;
 		h2 {
 			text-transform: none;
 			line-height: 1.1;
@@ -257,6 +292,17 @@ section {
 			width: 4rem;
 			height: auto;
 		}
+	}
+}
+.grid-section {
+	display: grid;
+	max-width: $max-content-width;
+	margin: 0 auto;
+	grid-template-columns: 1fr;
+	gap: 0;
+	@include mq($tablet) {
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
 	}
 }
 .grid {
