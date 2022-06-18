@@ -9,7 +9,7 @@
       {
         "name": "Double Lessons",
         "desc": "A two-hour driving lesson anytime of the day/week.",
-        "price": "£65.00"
+        "price": "£68.00"
       },
       {
         "name": "Introductory Offer",
@@ -19,7 +19,7 @@
       {
         "name": "10 Lesson Blocks",
         "desc": "10 x one-hour driving lessons scheduled for anytime of the day/week.",
-        "price": "£320"
+        "price": "£340"
       }
     ],
     "courses": [
