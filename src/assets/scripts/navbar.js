@@ -22,7 +22,6 @@ export default function() {
             navIsClosed = true;
         }
     });
-
     const header = document.querySelector('header');
     const hero = document.querySelector('.hero');
 
