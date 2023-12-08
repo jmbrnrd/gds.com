@@ -1,20 +1,22 @@
 
   {
+    "startingFrom": "£36",
+    "introCourse": "£185.00",
     "hours": [
       {
         "name": "Single Lessons",
         "desc": "A one-hour driving lesson anytime of the day/week.",
-        "price": "£35.00"
+        "price": "£38.00"
       },
       {
         "name": "Double Lessons",
         "desc": "A two-hour driving lesson anytime of the day/week.",
-        "price": "£69.00"
+        "price": "£75.00"
       },
       {
         "name": "Introductory Offer",
         "desc": "Your first 5 one-hour driving lessons anytime of the day/week.",
-        "price": "£160.00"
+        "price": "£185.00"
       },
       {
         "name": "10 Lesson Blocks",
@@ -26,12 +28,12 @@
       {
         "name": "Motorway Driving",
         "desc": "Ideal for newly passed students and drivers that want to build confidence and experience on the motorway.",
-        "price": "£35 p.h."
+        "price": "£40 p.h."
       },
       {
         "name": "Refresher Lessons",
         "desc": "Ideal for newly passed students and drivers that want to build confidence and experience on the motorway.",
-        "price": "£35 p.h."
+        "price": "£40 p.h."
       }
 
     ]
