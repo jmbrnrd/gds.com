@@ -352,14 +352,17 @@ section {
 			overflow: hidden;
 			transition: transform .3s ease-out;
 			&:hover {
-				transform: scale(1.05);
+				transform: scale(1.1);
 			}
 		}
 		.panel {
+			position: relative;
+			z-index: 10;
 			padding: .75rem;
 			font-size: .875rem;
 			font-style: italic;
 			line-height: 1.4;
+			background-color: white;
 			.name {
 				font-weight: 600;
 				text-align: right;
