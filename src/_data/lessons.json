@@ -1,27 +1,27 @@
 
   {
-    "startingFrom": "£38",
-    "introCourse": "£190.00",
+    "startingFrom": "£39",
+    "introCourse": "£195.00",
     "hours": [
       {
-        "name": "Single Lessons",
+        "name": "One-hour Lessons",
         "desc": "A one-hour driving lesson anytime of the day/week.",
-        "price": "£40.00"
+        "price": "£42.00"
       },
       {
-        "name": "Double Lessons",
+        "name": "One-and-a-half-hour Lessons",
+        "desc": "A one-hour driving lesson anytime of the day/week.",
+        "price": "£61.00"
+      },
+      {
+        "name": "Two-hour Lessons",
         "desc": "A two-hour driving lesson anytime of the day/week.",
-        "price": "£78.00"
+        "price": "£80.00"
       },
       {
         "name": "Introductory Offer",
         "desc": "Your first 5 one-hour driving lessons anytime of the day/week.",
-        "price": "£190.00"
-      },
-      {
-        "name": "10 Lesson Blocks",
-        "desc": "10 x one-hour driving lessons scheduled for anytime of the day/week.",
-        "price": "£390"
+        "price": "£195.00"
       }
     ],
     "courses": [
